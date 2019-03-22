@@ -8,6 +8,7 @@ class Ferry(object):
 	vehicle_types = ()
 	__max_vehicles = 0
 	current_vehicles = 0
+	ferry_size = ''
 
 	def __init__(self):
 		super(Ferry, self).__init__()
@@ -30,6 +31,10 @@ class Ferry(object):
 
 	def space_available(self):
 		return self.current_vehicles<self.__max_vehicles
+
+	def right_vehicle(self, vehicle_size):
+		return self.ferry_size==vehicle_size
+
 
 
 # f = Ferry()
